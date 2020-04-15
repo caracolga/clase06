@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+select {
+    position: absolute;
+    right: 3%;
+    top: 4%;
+    z-index:9999999999;
+}
+
+canvas {
+    display: block;
+}
+
+div {
+    padding: 0.5rem 3rem;
+}
+
+h1, p {
+    padding: 0.25rem;
+}
