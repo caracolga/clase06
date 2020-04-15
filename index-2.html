@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Fira+Mono&display=swap');
+    html, body {margin: 0; padding: 0; font-family: 'Fira Mono', monospace;}
+    canvas {display: block;}
+    </style>
+    <title>it's corona time</title>
+  </head>
+  <body>
+      <h1></h1>
+      <script>
+      var a = 40;
+      var b = 320;
+      var c;
+      var nombres = {
+          estudiantes: ["Camila Azócar", "María Paz Concha", "Olga F. Vio", "Trinidad González", "Matías Hagen", "María Francisca Hepp", "María Eliana Infante", "Magdalena Labarca", "Elsa Mora", "Vanessa Müller", "Jana Müller", "Muriel Muñoz", "María Trinidad Noriega", "Rosario Olivares", "Amparo Ortúzar", "Valeria Parraguéz", "Francisco Pezoa", "Francisca Purcell", "Martina Rivas", "Pilar Saavedra", "Lisa Saez", "David Sánchez", "Cecilia Soto", "María Elisa Valdés", "Francisca Vial", "María José Villasante"],
+          profesor: "Felipe Cortez"
+      }
+
+      function setup() {
+      createCanvas(windowWidth, windowHeight).position(0, 0).style('z-index', -1);
+      document.getElementsByTagName("h1")[0].append(nombres.estudiantes [2] + " en cuarentena");
+      console.log("la cuarentena me está volviendo loca :)");
+      }
+
+      function draw() {
+      colorMode(HSB, 360, 100, 100);
+      fill(random (b-90,b),40,100);
+      noStroke();
+      c = a * random (1,2);
+      ellipse(mouseX,mouseY,c,c);
+      frameRate (10)
+      }
+
+      function windowResized() {
+          resizeCanvas(windowWidth, windowHeight);
+      }
+
+      function mouseClicked() {
+      colorMode(HSB, 360, 100, 100);
+          if (b === 320) {b = random(b-a,90); }
+          else {b = 320;
+          }
+      }
+      </script>
+  </body>
+</html>
